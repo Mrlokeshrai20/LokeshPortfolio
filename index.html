@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lokesh Rai | Full Background Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      background: url('your-photo.jpg') no-repeat center center/cover;
+      color: #fff;
+    }
+    header {
+      height: 100vh;
+      background-color: rgba(0,0,0,0.5);
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px 10px #000;
+    }
+    h2 {
+      font-size: 1.5em;
+      text-shadow: 2px 2px 10px #000;
+    }
+    nav {
+      position: fixed; top: 20px; right: 30px;
+    }
+    nav a {
+      color: #fff; text-decoration: none; margin: 0 10px;
+      font-weight: 600;
+    }
+    nav a:hover { color: #00f0ff; }
+    section {
+      max-width: 800px;
+      margin: 20px auto; padding: 20px;
+      background: rgba(0,0,0,0.7);
+      border-radius: 10px; color: #fff;
+    }
+    .skills span {
+      background: #00f0ff; padding: 5px 10px;
+      border-radius: 20px; margin: 5px;
+      display: inline-block;
+    }
+    footer {
+      text-align: center; padding: 20px; color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<header>
+  <h1>Lokesh Rai</h1>
+  <h2><span id="typed"></span></h2>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a Certified Java Full Stack Developer from UpGrad and Content Researcher with experience in media archiving, social media strategy and digital content handling.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>Java</span>
+    <span>Spring Boot</span>
+    <span>React.js</span>
+    <span>MySQL</span>
+    <span>Content Research</span>
+    <span>Media Archiving</span>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: lokeshrai2120@gmail.com</p>
+  <p>Mobile: +91 88878 12627</p>
+  <p>GitHub: github.com/Mrlokeshrai20</p>
+  <p>Address: 447/7, Pratap Nagar, Gurgaon, India</p>
+</section>
+
+<footer>
+  &copy; 2025 Lokesh Rai | Full Background Portfolio
+</footer>
+
+<script>
+var typed = new Typed('#typed', {
+    strings: ["Java Full Stack Developer", "Content Researcher", "UpGrad Certified"],
+    typeSpeed: 50,
+    backSpeed: 25,
+    loop: true
+});
+</script>
+
+</body>
+</html>
