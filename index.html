@@ -4,53 +4,139 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lokesh Rai | Premium Sliding Portfolio</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Lokesh Rai's Portfolio | Full Stack Developer & Content Expert">
+  <meta name="keywords" content="Lokesh Rai, Java Developer, Full Stack, Portfolio, UpGrad, Content Researcher">
+  <meta name="author" content="Lokesh Rai">
+
+  <!-- Open Graph for Social Media Sharing -->
+  <meta property="og:title" content="Lokesh Rai | Java Full Stack Developer">
+  <meta property="og:description" content="Certified Java Developer and Media Content Expert from UpGrad">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mrlokeshrai20.github.io/LokeshPortfolio/">
+  <meta property="og:image" content="https://mrlokeshrai20.github.io/LokeshPortfolio/photo1.jpg">
+
+  <!-- Typed.js Library -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- CSS -->
   <style>
     * {margin:0; padding:0; box-sizing: border-box;}
-    body, html {height:100%; font-family: 'Poppins', sans-serif; overflow: hidden;}
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+
     .slider {
-      position:fixed; width:100%; height:100%;
-      z-index:-1; background-size:cover; background-position:center;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-size: cover;
+      background-position: center;
       animation: slideShow 20s infinite ease-in-out;
     }
+
     @keyframes slideShow {
-      0% {background-image: url('photo1.jpg'); transform:scale(1.1);}
-      25%{background-image: url('photo2.jpg'); transform:scale(1.05);}
-      50%{background-image: url('photo3.jpg'); transform:scale(1.1);}
-      75%{background-image: url('photo4.jpg'); transform:scale(1.05);}
-      100%{background-image: url('photo1.jpg'); transform:scale(1.1);}
+      0% {background-image: url('photo1.jpg'); transform: scale(1.1);}
+      25%{background-image: url('photo2.jpg'); transform: scale(1.05);}
+      50%{background-image: url('photo3.jpg'); transform: scale(1.1);}
+      75%{background-image: url('photo4.jpg'); transform: scale(1.05);}
+      100%{background-image: url('photo1.jpg'); transform: scale(1.1);}
     }
+
     .overlay {
-      position:absolute; width:100%; height:100%;
-      background:linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8));
-      z-index:0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8));
+      z-index: 0;
     }
+
     header {
-      position:relative; height:80vh;
-      display:flex; justify-content:center; align-items:center;
-      text-align:center; color:#fff; z-index:1;
+      position: relative;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      z-index: 1;
     }
-    h1 {font-size:3em; text-shadow:2px 2px 20px #000;}
-    h2 {font-size:1.5em; text-shadow:2px 2px 20px #000;}
+
+    h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px 20px #000;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      text-shadow: 2px 2px 20px #000;
+    }
+
     nav {
-      position:fixed; top:20px; right:30px; z-index:1;
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      z-index: 1;
     }
+
     nav a {
-      color:#fff; text-decoration:none; margin:0 10px; font-weight:600;
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 600;
     }
-    nav a:hover {color:#00f0ff;}
+
+    nav a:hover {
+      color: #00f0ff;
+    }
+
     section {
-      max-width:800px; margin:20px auto; padding:20px;
-      background:rgba(255,255,255,0.1); backdrop-filter:blur(10px);
-      border-radius:10px; color:#fff; z-index:1; position:relative;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      color: #fff;
+      z-index: 1;
+      position: relative;
     }
+
     .skills span {
-      background:#00f0ff; padding:5px 10px; border-radius:20px;
-      margin:5px; display:inline-block;
+      background: #00f0ff;
+      padding: 5px 10px;
+      border-radius: 20px;
+      margin: 5px;
+      display: inline-block;
     }
+
     footer {
-      text-align:center; padding:20px; color:#ccc; z-index:1; position:relative;
+      text-align: center;
+      padding: 20px;
+      color: #ccc;
+      z-index: 1;
+      position: relative;
+    }
+
+    a {
+      color: #00f0ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -62,6 +148,7 @@
 <nav>
   <a href="#about">About</a>
   <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -89,11 +176,20 @@
   </div>
 </section>
 
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="skills">
+    <span>🧾 Resume Builder Web App (Java, Spring Boot)</span><br>
+    <span>📊 Social Media Tracker (Excel + Automation)</span><br>
+    <span>📰 News Archiver System (React + MongoDB)</span><br>
+  </div>
+</section>
+
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email: lokeshrai2120@gmail.com</p>
-  <p>Mobile: +91 88878 12627</p>
-  <p>GitHub: github.com/Mrlokeshrai20</p>
+  <p>Email: <a href="mailto:lokeshrai2120@gmail.com">lokeshrai2120@gmail.com</a></p>
+  <p>Mobile: <a href="tel:+918887812627">+91 88878 12627</a></p>
+  <p>GitHub: <a href="https://github.com/Mrlokeshrai20" target="_blank">github.com/Mrlokeshrai20</a></p>
   <p>Address: 447/7, Pratap Nagar, Gurgaon, India</p>
 </section>
 
@@ -102,10 +198,12 @@
 </footer>
 
 <script>
-var typed = new Typed('#typed', {
+  var typed = new Typed('#typed', {
     strings: ["Java Full Stack Developer", "Media Content Expert", "Creative Thinker"],
-    typeSpeed: 50, backSpeed: 25, loop: true
-});
+    typeSpeed: 50,
+    backSpeed: 25,
+    loop: true
+  });
 </script>
 
 </body>
