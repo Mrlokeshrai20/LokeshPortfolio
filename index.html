@@ -8,20 +8,33 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body, html {
+    html, body {
       height: 100%;
       font-family: 'Poppins', sans-serif;
-      background: url('background.jpg') no-repeat center center/cover;
       color: #fff;
+      overflow-x: hidden;
     }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      z-index: -2;
+    }
+
     .overlay {
       position: fixed;
       width: 100%;
       height: 100%;
       background: rgba(0, 0, 0, 0.6);
       z-index: -1;
-      backdrop-filter: blur(3px);
+      backdrop-filter: blur(4px);
     }
+
     header {
       height: 100vh;
       display: flex;
@@ -31,42 +44,50 @@
       text-align: center;
       padding: 20px;
     }
+
     header h1 {
       font-size: 3em;
       font-weight: 600;
       text-shadow: 2px 2px 10px #000;
     }
+
     header h2 {
       font-size: 1.5em;
       font-weight: 300;
       margin-top: 10px;
     }
+
     nav {
       position: fixed;
       top: 20px;
       right: 30px;
     }
+
     nav a {
       color: #fff;
       text-decoration: none;
       margin-left: 20px;
       font-weight: 600;
     }
+
     nav a:hover {
       color: #00f0ff;
     }
+
     section {
       max-width: 800px;
       margin: 40px auto;
       padding: 30px;
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
       border-radius: 12px;
     }
+
     h2 {
       margin-bottom: 10px;
       color: #00f0ff;
     }
+
     .skills span {
       display: inline-block;
       background: #00f0ff;
@@ -76,6 +97,7 @@
       color: #000;
       font-weight: bold;
     }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -126,25 +148,3 @@
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: lokeshrai2120@gmail.com</p>
-  <p>Mobile: +91 88878 12627</p>
-  <p>GitHub: <a href="https://github.com/Mrlokeshrai20" target="_blank" style="color:#00f0ff;">github.com/Mrlokeshrai20</a></p>
-  <p>Location: Gurgaon, India</p>
-</section>
-
-<footer>
-  &copy; 2025 Lokesh Rai | Built with Passion in Java
-</footer>
-
-<script>
-  var typed = new Typed('#typed', {
-    strings: ["Java Full Stack Developer", "Content Research Expert", "Digital Media Strategist"],
-    typeSpeed: 50,
-    backSpeed: 25,
-    loop: true
-  });
-</script>
-
-</body>
-</html>
