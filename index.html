@@ -4,124 +4,88 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lokesh Rai | Java Full Stack Developer</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: url('background.jpg') no-repeat center center/cover;
+      color: #fff;
     }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f9fafb;
-      color: #111;
+    .overlay {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+      backdrop-filter: blur(3px);
     }
-
-    .hero {
-      background: url('background.jpg') center center / cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 140px 20px 100px;
-      position: relative;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* dark overlay */
-      z-index: 0;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero h1 {
-      font-size: 3em;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 1.3em;
-      font-weight: 300;
-    }
-
-    nav {
-      background: #fff;
-      padding: 15px 30px;
+    header {
+      height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      gap: 30px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      align-items: center;
+      text-align: center;
+      padding: 20px;
     }
-
+    header h1 {
+      font-size: 3em;
+      font-weight: 600;
+      text-shadow: 2px 2px 10px #000;
+    }
+    header h2 {
+      font-size: 1.5em;
+      font-weight: 300;
+      margin-top: 10px;
+    }
+    nav {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+    }
     nav a {
-      color: #0077ff;
+      color: #fff;
       text-decoration: none;
+      margin-left: 20px;
       font-weight: 600;
     }
-
+    nav a:hover {
+      color: #00f0ff;
+    }
     section {
-      max-width: 900px;
-      margin: 60px auto;
+      max-width: 800px;
+      margin: 40px auto;
       padding: 30px;
-      background: white;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
       border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
     }
-
-    section h2 {
-      font-size: 1.8em;
-      color: #0077ff;
-      margin-bottom: 20px;
+    h2 {
+      margin-bottom: 10px;
+      color: #00f0ff;
     }
-
-    .skills span, .project-card {
+    .skills span {
       display: inline-block;
-      background: #eef4ff;
-      color: #0077ff;
-      padding: 8px 16px;
+      background: #00f0ff;
+      padding: 6px 12px;
+      margin: 5px;
       border-radius: 20px;
-      margin: 8px 8px 0 0;
-      font-weight: 500;
+      color: #000;
+      font-weight: bold;
     }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
     footer {
       text-align: center;
-      font-size: 0.9em;
-      padding: 30px 10px;
-      color: #888;
-    }
-
-    a {
-      color: #0077ff;
+      padding: 20px;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
 
-<div class="hero">
-  <div class="hero-content">
-    <h1>Lokesh Rai</h1>
-    <p>Java Full Stack Developer | Content Research Expert</p>
-  </div>
-</div>
+<div class="overlay"></div>
 
 <nav>
   <a href="#about">About</a>
@@ -130,11 +94,14 @@
   <a href="#contact">Contact</a>
 </nav>
 
+<header>
+  <h1>Lokesh Rai</h1>
+  <h2><span id="typed"></span></h2>
+</header>
+
 <section id="about">
   <h2>About Me</h2>
-  <p>
-    I'm a Certified Java Full Stack Developer from UpGrad, with hands-on experience in backend (Spring Boot), frontend (React), and database (MySQL). I also specialize in content research, media strategy, and digital storytelling — combining technology with creativity.
-  </p>
+  <p>I am a Certified Java Full Stack Developer with strong foundation in Spring Boot, React, and SQL. I also have deep experience in content research and media archiving for digital platforms.</p>
 </section>
 
 <section id="skills">
@@ -142,10 +109,42 @@
   <div class="skills">
     <span>Java</span>
     <span>Spring Boot</span>
-    <span>React</span>
+    <span>React.js</span>
     <span>MySQL</span>
-    <span>Content Research</span>
-    <span>Media Archiving</span>
-    <span>Digital Storytelling</span>
+    <span>Media Research</span>
+    <span>Content Strategy</span>
+  </div>
+</section>
 
+<section id="projects">
+  <h2>Projects</h2>
+  <ul>
+    <li>🛒 E-commerce Platform using Java + React</li>
+    <li>📊 Digital Media Dashboard with Spring Boot</li>
+    <li>🗂️ Content Management System</li>
+  </ul>
+</section>
 
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: lokeshrai2120@gmail.com</p>
+  <p>Mobile: +91 88878 12627</p>
+  <p>GitHub: <a href="https://github.com/Mrlokeshrai20" target="_blank" style="color:#00f0ff;">github.com/Mrlokeshrai20</a></p>
+  <p>Location: Gurgaon, India</p>
+</section>
+
+<footer>
+  &copy; 2025 Lokesh Rai | Built with Passion in Java
+</footer>
+
+<script>
+  var typed = new Typed('#typed', {
+    strings: ["Java Full Stack Developer", "Content Research Expert", "Digital Media Strategist"],
+    typeSpeed: 50,
+    backSpeed: 25,
+    loop: true
+  });
+</script>
+
+</body>
+</html>
