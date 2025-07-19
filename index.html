@@ -3,18 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lokesh Rai | Full Stack Developer</title>
+  <title>Lokesh Rai | Java Full Stack Developer</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-  <!-- SEO Meta -->
-  <meta name="description" content="Portfolio of Lokesh Rai - Java Full Stack Developer and Media Content Expert.">
-  <meta name="keywords" content="Lokesh Rai, Portfolio, Java Developer, Full Stack, UpGrad">
-  <meta name="author" content="Lokesh Rai">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <style>
     * {
@@ -27,114 +19,109 @@
       font-family: 'Inter', sans-serif;
       background: #f9fafb;
       color: #111;
-      line-height: 1.6;
     }
 
-    header {
-      background: linear-gradient(to right, #0077ff, #00c6ff);
+    .hero {
+      background: url('background.jpg') center center / cover no-repeat;
       color: white;
-      padding: 80px 20px 60px;
       text-align: center;
+      padding: 140px 20px 100px;
+      position: relative;
     }
 
-    header h1 {
-      font-size: 2.8em;
-      margin-bottom: 10px;
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* dark overlay */
+      z-index: 0;
     }
 
-    header h2 {
-      font-size: 1.4em;
-      font-weight: 400;
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.3em;
+      font-weight: 300;
     }
 
     nav {
-      background: white;
+      background: #fff;
       padding: 15px 30px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
+      gap: 30px;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
     nav a {
-      color: #333;
-      text-decoration: none;
-      margin-left: 25px;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
       color: #0077ff;
+      text-decoration: none;
+      font-weight: 600;
     }
 
     section {
       max-width: 900px;
-      margin: 50px auto;
+      margin: 60px auto;
       padding: 30px;
       background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
     }
 
     section h2 {
       font-size: 1.8em;
-      margin-bottom: 15px;
       color: #0077ff;
-    }
-
-    .about-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .about-container img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
       margin-bottom: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
     .skills span, .project-card {
       display: inline-block;
-      background: #f0f4ff;
+      background: #eef4ff;
       color: #0077ff;
-      padding: 8px 14px;
+      padding: 8px 16px;
       border-radius: 20px;
-      margin: 6px 8px 6px 0;
+      margin: 8px 8px 0 0;
       font-weight: 500;
     }
 
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
+      gap: 20px;
     }
 
     footer {
       text-align: center;
-      padding: 30px 10px;
       font-size: 0.9em;
+      padding: 30px 10px;
       color: #888;
     }
 
     a {
       color: #0077ff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+
+<div class="hero">
+  <div class="hero-content">
+    <h1>Lokesh Rai</h1>
+    <p>Java Full Stack Developer | Content Research Expert</p>
+  </div>
+</div>
 
 <nav>
   <a href="#about">About</a>
@@ -143,19 +130,11 @@
   <a href="#contact">Contact</a>
 </nav>
 
-<header>
-  <h1>Lokesh Rai</h1>
-  <h2>Java Full Stack Developer | Media Content Expert</h2>
-</header>
-
 <section id="about">
   <h2>About Me</h2>
-  <div class="about-container">
-    <img src="profile.jpg" alt="Lokesh Rai Profile Photo" />
-    <p>
-      I am a Certified Java Full Stack Developer from UpGrad and a Content Researcher with experience in media archiving, social media strategy, and digital content handling. I combine strong technical skills with creativity and storytelling.
-    </p>
-  </div>
+  <p>
+    I'm a Certified Java Full Stack Developer from UpGrad, with hands-on experience in backend (Spring Boot), frontend (React), and database (MySQL). I also specialize in content research, media strategy, and digital storytelling — combining technology with creativity.
+  </p>
 </section>
 
 <section id="skills">
@@ -163,35 +142,10 @@
   <div class="skills">
     <span>Java</span>
     <span>Spring Boot</span>
-    <span>React.js</span>
+    <span>React</span>
     <span>MySQL</span>
     <span>Content Research</span>
     <span>Media Archiving</span>
-    <span>Social Media Strategy</span>
-  </div>
-</section>
+    <span>Digital Storytelling</span>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="projects">
-    <div class="project-card">🧾 Resume Builder Web App (Java, Spring Boot)</div>
-    <div class="project-card">📊 Social Media Tracker (Excel + Python)</div>
-    <div class="project-card">📰 News Archiver System (React + MongoDB)</div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:lokeshrai2120@gmail.com">lokeshrai2120@gmail.com</a></p>
-  <p>Mobile: <a href="tel:+918887812627">+91 88878 12627</a></p>
-  <p>GitHub: <a href="https://github.com/Mrlokeshrai20" target="_blank">github.com/Mrlokeshrai20</a></p>
-  <p>Address: 447/7, Pratap Nagar, Gurgaon, India</p>
-</section>
-
-<footer>
-  &copy; 2025 Lokesh Rai. All Rights Reserved.
-</footer>
-
-</body>
-</html>
 
