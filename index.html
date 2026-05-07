@@ -8,13 +8,17 @@
 
 <title>Lokesh Rai | Portfolio</title>
 
+<!-- GOOGLE FONT -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+<!-- ICONS -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <style>
+
+/* RESET */
 
 *{
 margin:0;
@@ -24,36 +28,36 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:'Inter',sans-serif;
+font-family:'Outfit',sans-serif;
 background:#050816;
 color:white;
 overflow-x:hidden;
 }
 
-/* FULL BACKGROUND IMAGE */
+/* BACKGROUND */
 
-.bg-image{
+.bg{
 position:fixed;
-width:100%;
-height:100%;
 top:0;
 left:0;
+width:100%;
+height:100%;
 background:
 linear-gradient(
 to bottom,
-rgba(5,8,22,0.85),
-rgba(5,8,22,0.92)
+rgba(5,8,22,0.86),
+rgba(5,8,22,0.94)
 ),
 url('yourphoto.jpg');
 
-background-size:cover;
-background-position:center top;
+background-size:contain;
 background-repeat:no-repeat;
-z-index:-3;
-filter:brightness(0.9);
+background-position:right bottom;
+
+z-index:-5;
 }
 
-/* BLUE GLOW */
+/* GLOW */
 
 body::before{
 content:'';
@@ -62,8 +66,8 @@ width:100%;
 height:100%;
 background:
 radial-gradient(circle at top left,#0ea5e944,transparent 25%),
-radial-gradient(circle at bottom right,#2563eb33,transparent 28%);
-z-index:-2;
+radial-gradient(circle at bottom right,#2563eb33,transparent 30%);
+z-index:-4;
 }
 
 /* NAVBAR */
@@ -73,18 +77,18 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:22px 8%;
+padding:24px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(5,8,22,0.75);
-backdrop-filter:blur(14px);
+background:rgba(5,8,22,0.55);
+backdrop-filter:blur(18px);
 z-index:999;
 border-bottom:1px solid rgba(255,255,255,0.06);
 }
 
 .logo{
-font-size:32px;
+font-size:34px;
 font-weight:800;
 }
 
@@ -94,15 +98,15 @@ color:#0ea5e9;
 
 nav ul{
 display:flex;
-gap:34px;
 list-style:none;
+gap:34px;
 }
 
 nav ul li a{
 color:white;
+text-decoration:none;
 font-weight:500;
 transition:0.3s;
-text-decoration:none;
 }
 
 nav ul li a:hover{
@@ -110,12 +114,13 @@ color:#0ea5e9;
 }
 
 .resume-btn{
-padding:13px 28px;
-border-radius:40px;
-background:linear-gradient(90deg,#0ea5e9,#2563eb);
-font-weight:600;
+padding:14px 30px;
+border-radius:50px;
+background:linear-gradient(135deg,#0ea5e9,#2563eb);
 text-decoration:none;
 color:white;
+font-weight:600;
+box-shadow:0 10px 30px rgba(37,99,235,0.35);
 }
 
 /* HERO */
@@ -129,6 +134,7 @@ padding:150px 8% 100px;
 
 .hero-content{
 max-width:760px;
+animation:fadeUp 1.2s ease;
 }
 
 .hero-tag{
@@ -136,18 +142,19 @@ display:inline-block;
 padding:12px 24px;
 border-radius:40px;
 background:rgba(255,255,255,0.05);
+backdrop-filter:blur(12px);
 border:1px solid rgba(255,255,255,0.08);
-margin-bottom:30px;
+margin-bottom:28px;
 font-size:14px;
 letter-spacing:1px;
-backdrop-filter:blur(10px);
 }
 
 .hero h1{
-font-size:90px;
+font-size:95px;
 line-height:1;
-margin-bottom:24px;
+margin-bottom:26px;
 font-weight:800;
+letter-spacing:-4px;
 }
 
 .hero h1 span{
@@ -158,8 +165,8 @@ color:#0ea5e9;
 font-size:20px;
 line-height:1.9;
 color:#d1d5db;
-margin-bottom:40px;
-max-width:700px;
+max-width:680px;
+margin-bottom:42px;
 }
 
 /* BUTTONS */
@@ -172,19 +179,20 @@ margin-bottom:40px;
 }
 
 .btn{
-padding:16px 34px;
+padding:17px 36px;
 border-radius:50px;
-font-weight:600;
 display:flex;
 align-items:center;
 gap:12px;
-transition:0.4s;
+font-weight:600;
 text-decoration:none;
+transition:0.4s;
 }
 
 .primary-btn{
-background:linear-gradient(90deg,#0ea5e9,#2563eb);
+background:linear-gradient(135deg,#0ea5e9,#2563eb);
 color:white;
+box-shadow:0 10px 30px rgba(37,99,235,0.35);
 }
 
 .secondary-btn{
@@ -197,11 +205,11 @@ background:rgba(255,255,255,0.03);
 transform:translateY(-7px);
 }
 
-/* SOCIALS */
+/* SOCIAL */
 
 .socials{
 display:flex;
-gap:20px;
+gap:18px;
 margin-top:25px;
 }
 
@@ -211,12 +219,11 @@ height:68px;
 display:flex;
 align-items:center;
 justify-content:center;
-border-radius:22px;
+border-radius:24px;
 font-size:28px;
 transition:0.4s;
-backdrop-filter:blur(12px);
-border:1px solid rgba(255,255,255,0.08);
 text-decoration:none;
+backdrop-filter:blur(12px);
 }
 
 .social-btn:hover{
@@ -227,8 +234,8 @@ transform:translateY(-8px) scale(1.05);
 background:
 linear-gradient(
 135deg,
-rgba(10,102,194,0.3),
-rgba(10,102,194,0.08)
+rgba(10,102,194,0.4),
+rgba(10,102,194,0.1)
 );
 }
 
@@ -255,8 +262,8 @@ gap:24px;
 padding:32px;
 border-radius:28px;
 background:rgba(255,255,255,0.05);
-backdrop-filter:blur(16px);
-border:1px solid rgba(255,255,255,0.05);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.06);
 transition:0.4s;
 }
 
@@ -272,7 +279,7 @@ color:#0ea5e9;
 }
 
 .stat-box h2{
-font-size:36px;
+font-size:38px;
 margin-bottom:10px;
 }
 
@@ -283,37 +290,39 @@ color:#d1d5db;
 /* SECTION */
 
 section{
-padding:110px 8%;
+padding:120px 8%;
 }
 
 .section-title{
 font-size:58px;
-font-weight:800;
 text-align:center;
-margin-bottom:75px;
+margin-bottom:80px;
+font-weight:800;
+letter-spacing:-2px;
 }
 
 .section-title span{
 color:#0ea5e9;
 }
 
-/* GLASS BOX */
+/* GLASS */
 
 .glass{
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(18px);
 border:1px solid rgba(255,255,255,0.06);
-border-radius:32px;
+border-radius:34px;
+box-shadow:0 12px 40px rgba(0,0,0,0.28);
 }
 
 /* ABOUT */
 
 .about-box{
-padding:55px;
+padding:60px;
 }
 
 .about-box h3{
-font-size:42px;
+font-size:48px;
 margin-bottom:24px;
 }
 
@@ -330,28 +339,86 @@ color:#d1d5db;
 /* SKILLS */
 
 .skills-grid{
+margin-top:50px;
 display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:25px;
-margin-top:40px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:28px;
 }
 
 .skill-card{
-padding:28px;
-border-radius:24px;
+padding:35px;
+border-radius:30px;
 background:rgba(255,255,255,0.04);
-transition:0.4s;
+transition:0.5s;
+position:relative;
+overflow:hidden;
+}
+
+.skill-card::before{
+content:'';
+position:absolute;
+width:160%;
+height:160%;
+background:
+linear-gradient(
+135deg,
+rgba(14,165,233,0.12),
+transparent
+);
+
+top:-120%;
+left:-120%;
+transition:0.6s;
+}
+
+.skill-card:hover::before{
+top:0;
+left:0;
 }
 
 .skill-card:hover{
-transform:translateY(-8px);
+transform:translateY(-12px);
 border:1px solid #0ea5e9;
 }
 
-.skill-card i{
+.skill-icon{
+width:74px;
+height:74px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:24px;
 font-size:32px;
-margin-bottom:18px;
-color:#0ea5e9;
+margin-bottom:24px;
+background:linear-gradient(135deg,#0ea5e9,#2563eb);
+box-shadow:0 10px 25px rgba(14,165,233,0.28);
+}
+
+.skill-card h3{
+font-size:30px;
+margin-bottom:16px;
+}
+
+.skill-card p{
+line-height:1.9;
+color:#d1d5db;
+margin-bottom:28px;
+}
+
+.skill-progress{
+width:100%;
+height:10px;
+border-radius:20px;
+background:#1e293b;
+overflow:hidden;
+}
+
+.skill-progress span{
+display:block;
+height:100%;
+border-radius:20px;
+background:linear-gradient(90deg,#0ea5e9,#2563eb);
+animation:loadBar 2s ease;
 }
 
 /* EXPERIENCE */
@@ -359,13 +426,11 @@ color:#0ea5e9;
 .exp-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:28px;
+gap:30px;
 }
 
 .exp-card{
-padding:35px;
-border-radius:30px;
-background:rgba(255,255,255,0.05);
+padding:36px;
 transition:0.4s;
 }
 
@@ -375,7 +440,7 @@ border:1px solid #0ea5e9;
 }
 
 .exp-card h3{
-font-size:30px;
+font-size:32px;
 margin-bottom:12px;
 }
 
@@ -400,13 +465,13 @@ gap:30px;
 }
 
 .project-card{
-height:380px;
-border-radius:30px;
+height:390px;
+border-radius:32px;
 overflow:hidden;
 position:relative;
 display:flex;
 align-items:flex-end;
-padding:35px;
+padding:38px;
 background-size:cover;
 background-position:center;
 transition:0.4s;
@@ -417,9 +482,9 @@ content:'';
 position:absolute;
 width:100%;
 height:100%;
+background:linear-gradient(to top,#000000ef 10%,transparent 80%);
 left:0;
 top:0;
-background:linear-gradient(to top,#000000ef 10%,transparent 75%);
 }
 
 .project-card:hover{
@@ -432,7 +497,7 @@ z-index:2;
 }
 
 .project-content h3{
-font-size:32px;
+font-size:34px;
 margin-bottom:14px;
 }
 
@@ -444,18 +509,18 @@ color:#e2e8f0;
 /* CONTACT */
 
 .contact-box{
-padding:60px;
+padding:65px;
 }
 
 .contact-box h3{
-font-size:42px;
+font-size:46px;
 margin-bottom:18px;
 }
 
 .contact-box p{
 line-height:2;
 color:#d1d5db;
-margin-bottom:30px;
+margin-bottom:32px;
 }
 
 .contact-info{
@@ -476,24 +541,53 @@ font-size:22px;
 }
 
 footer{
-padding:40px;
+padding:45px;
 text-align:center;
 color:#94a3b8;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(50px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes loadBar{
+
+from{
+width:0;
+}
+
 }
 
 /* MOBILE */
 
 @media(max-width:1100px){
 
+.bg{
+width:100%;
+background-size:cover;
+opacity:0.18;
+}
+
 .stats,
-.skills-grid,
 .exp-grid,
 .project-grid{
 grid-template-columns:1fr;
 }
 
 .hero h1{
-font-size:60px;
+font-size:62px;
 }
 
 }
@@ -512,11 +606,11 @@ justify-content:center;
 }
 
 .hero{
-padding-top:200px;
+padding-top:210px;
 }
 
 .hero h1{
-font-size:46px;
+font-size:48px;
 }
 
 .hero p{
@@ -524,11 +618,15 @@ font-size:17px;
 }
 
 .section-title{
-font-size:40px;
+font-size:42px;
+}
+
+.about-box h3{
+font-size:38px;
 }
 
 .project-card{
-height:300px;
+height:320px;
 }
 
 }
@@ -539,7 +637,7 @@ height:300px;
 
 <body>
 
-<div class="bg-image"></div>
+<div class="bg"></div>
 
 <!-- NAVBAR -->
 
@@ -672,26 +770,130 @@ and creating engaging digital content across Instagram,
 Facebook, and X.
 </p>
 
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="section-title">
+My <span>Skills</span>
+</h2>
+
 <div class="skills-grid">
 
-<div class="skill-card">
-<i class="fa-solid fa-calendar-days"></i>
+<div class="skill-card glass">
+
+<div class="skill-icon">
+<i class="fa-solid fa-hashtag"></i>
+</div>
+
 <h3>Social Media Management</h3>
+
+<p>
+Managing Instagram, Facebook & digital platforms
+with content planning and audience engagement.
+</p>
+
+<div class="skill-progress">
+<span style="width:95%"></span>
 </div>
 
-<div class="skill-card">
+</div>
+
+<div class="skill-card glass">
+
+<div class="skill-icon">
+<i class="fa-solid fa-camera-retro"></i>
+</div>
+
+<h3>Instagram Growth Strategy</h3>
+
+<p>
+Reels planning, trend tracking, reach optimization
+and engagement improvement strategies.
+</p>
+
+<div class="skill-progress">
+<span style="width:92%"></span>
+</div>
+
+</div>
+
+<div class="skill-card glass">
+
+<div class="skill-icon">
 <i class="fa-solid fa-pen-nib"></i>
+</div>
+
 <h3>Content Research</h3>
+
+<p>
+Research-driven content planning, issue analysis
+and communication support for campaigns.
+</p>
+
+<div class="skill-progress">
+<span style="width:94%"></span>
 </div>
 
-<div class="skill-card">
-<i class="fa-solid fa-bullhorn"></i>
-<h3>Campaign Coordination</h3>
 </div>
 
-<div class="skill-card">
+<div class="skill-card glass">
+
+<div class="skill-icon">
+<i class="fa-solid fa-video"></i>
+</div>
+
+<h3>Reels & Short Videos</h3>
+
+<p>
+Planning short-form content, captions,
+hooks and engagement-focused video ideas.
+</p>
+
+<div class="skill-progress">
+<span style="width:88%"></span>
+</div>
+
+</div>
+
+<div class="skill-card glass">
+
+<div class="skill-icon">
 <i class="fa-solid fa-chart-line"></i>
-<h3>Growth Strategy</h3>
+</div>
+
+<h3>Analytics & Reporting</h3>
+
+<p>
+Monitoring insights, audience behaviour,
+growth reports and campaign performance.
+</p>
+
+<div class="skill-progress">
+<span style="width:85%"></span>
+</div>
+
+</div>
+
+<div class="skill-card glass">
+
+<div class="skill-icon">
+<i class="fa-solid fa-bullhorn"></i>
+</div>
+
+<h3>Campaign Coordination</h3>
+
+<p>
+Coordinating creatives, schedules,
+communication flow and digital execution.
+</p>
+
+<div class="skill-progress">
+<span style="width:90%"></span>
 </div>
 
 </div>
@@ -710,7 +912,7 @@ Work <span>Experience</span>
 
 <div class="exp-grid">
 
-<div class="exp-card glass">
+<div class="glass exp-card">
 
 <h3>Moving Pixel Pvt. Ltd.</h3>
 
@@ -726,7 +928,7 @@ Work <span>Experience</span>
 
 </div>
 
-<div class="exp-card glass">
+<div class="glass exp-card">
 
 <h3>Freelance Content Researcher</h3>
 
