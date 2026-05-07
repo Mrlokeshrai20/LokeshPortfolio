@@ -8,14 +8,17 @@
 
 <title>Lokesh Rai | Portfolio</title>
 
+<!-- GOOGLE FONT -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+<!-- ICONS -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <style>
+
+/* RESET */
 
 *{
 margin:0;
@@ -31,38 +34,6 @@ color:white;
 overflow-x:hidden;
 }
 
-/* LOADER */
-
-#loader{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:#050816;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-z-index:99999;
-animation:hideLoader 1s ease 2.8s forwards;
-}
-
-.loader-ring{
-width:90px;
-height:90px;
-border-radius:50%;
-border:4px solid rgba(255,255,255,0.08);
-border-top:4px solid #0ea5e9;
-animation:spin 1s linear infinite;
-margin-bottom:24px;
-}
-
-#loader h2{
-font-size:34px;
-letter-spacing:2px;
-}
-
 /* BACKGROUND */
 
 .bg{
@@ -74,48 +45,30 @@ height:100%;
 background:
 linear-gradient(
 to bottom,
-rgba(5,8,22,0.88),
-rgba(5,8,22,0.96)
+rgba(5,8,22,0.86),
+rgba(5,8,22,0.94)
 ),
 url('yourphoto.jpg');
 
 background-size:contain;
 background-repeat:no-repeat;
 background-position:right bottom;
+
 z-index:-5;
 }
 
-/* PARTICLES */
+/* GLOW */
 
-.particles{
+body::before{
+content:'';
 position:fixed;
 width:100%;
 height:100%;
-top:0;
-left:0;
-overflow:hidden;
-z-index:-2;
+background:
+radial-gradient(circle at top left,#0ea5e944,transparent 25%),
+radial-gradient(circle at bottom right,#2563eb33,transparent 30%);
+z-index:-4;
 }
-
-.particles span{
-position:absolute;
-display:block;
-width:8px;
-height:8px;
-background:rgba(14,165,233,0.4);
-border-radius:50%;
-animation:float 12s linear infinite;
-bottom:-100px;
-}
-
-.particles span:nth-child(1){left:10%;animation-duration:10s;}
-.particles span:nth-child(2){left:25%;animation-duration:14s;}
-.particles span:nth-child(3){left:40%;animation-duration:11s;width:12px;height:12px;}
-.particles span:nth-child(4){left:55%;animation-duration:16s;}
-.particles span:nth-child(5){left:70%;animation-duration:13s;}
-.particles span:nth-child(6){left:82%;animation-duration:17s;}
-.particles span:nth-child(7){left:92%;animation-duration:12s;}
-.particles span:nth-child(8){left:48%;animation-duration:15s;}
 
 /* NAVBAR */
 
@@ -167,6 +120,7 @@ background:linear-gradient(135deg,#0ea5e9,#2563eb);
 text-decoration:none;
 color:white;
 font-weight:600;
+box-shadow:0 10px 30px rgba(37,99,235,0.35);
 }
 
 /* HERO */
@@ -215,6 +169,8 @@ max-width:680px;
 margin-bottom:42px;
 }
 
+/* BUTTONS */
+
 .hero-buttons{
 display:flex;
 gap:20px;
@@ -236,11 +192,13 @@ transition:0.4s;
 .primary-btn{
 background:linear-gradient(135deg,#0ea5e9,#2563eb);
 color:white;
+box-shadow:0 10px 30px rgba(37,99,235,0.35);
 }
 
 .secondary-btn{
 border:2px solid #0ea5e9;
 color:#0ea5e9;
+background:rgba(255,255,255,0.03);
 }
 
 .btn:hover{
@@ -252,6 +210,7 @@ transform:translateY(-7px);
 .socials{
 display:flex;
 gap:18px;
+margin-top:25px;
 }
 
 .social-btn{
@@ -264,6 +223,7 @@ border-radius:24px;
 font-size:28px;
 transition:0.4s;
 text-decoration:none;
+backdrop-filter:blur(12px);
 }
 
 .social-btn:hover{
@@ -271,8 +231,12 @@ transform:translateY(-8px) scale(1.05);
 }
 
 .linkedin{
-background:linear-gradient(135deg,#0A66C2,#004182);
-color:white;
+background:
+linear-gradient(
+135deg,
+rgba(10,102,194,0.4),
+rgba(10,102,194,0.1)
+);
 }
 
 .instagram{
@@ -283,7 +247,44 @@ linear-gradient(
 #FD1D1D,
 #FCAF45
 );
-color:white;
+}
+
+/* STATS */
+
+.stats{
+margin-top:60px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:24px;
+}
+
+.stat-box{
+padding:32px;
+border-radius:28px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.06);
+transition:0.4s;
+}
+
+.stat-box:hover{
+transform:translateY(-10px);
+border-color:#0ea5e9;
+}
+
+.stat-box i{
+font-size:30px;
+margin-bottom:18px;
+color:#0ea5e9;
+}
+
+.stat-box h2{
+font-size:38px;
+margin-bottom:10px;
+}
+
+.stat-box p{
+color:#d1d5db;
 }
 
 /* SECTION */
@@ -297,6 +298,7 @@ font-size:58px;
 text-align:center;
 margin-bottom:80px;
 font-weight:800;
+letter-spacing:-2px;
 }
 
 .section-title span{
@@ -310,6 +312,7 @@ background:rgba(255,255,255,0.05);
 backdrop-filter:blur(18px);
 border:1px solid rgba(255,255,255,0.06);
 border-radius:34px;
+box-shadow:0 12px 40px rgba(0,0,0,0.28);
 }
 
 /* ABOUT */
@@ -323,6 +326,10 @@ font-size:48px;
 margin-bottom:24px;
 }
 
+.about-box h3 span{
+color:#0ea5e9;
+}
+
 .about-box p{
 line-height:2;
 font-size:18px;
@@ -332,6 +339,7 @@ color:#d1d5db;
 /* SKILLS */
 
 .skills-grid{
+margin-top:50px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:28px;
@@ -340,35 +348,37 @@ gap:28px;
 .skill-card{
 padding:35px;
 border-radius:30px;
+background:rgba(255,255,255,0.04);
 transition:0.5s;
+position:relative;
+overflow:hidden;
 }
 
-.skill-card:nth-child(1){
-background:linear-gradient(135deg,#0f172a,#0ea5e922);
+.skill-card::before{
+content:'';
+position:absolute;
+width:160%;
+height:160%;
+background:
+linear-gradient(
+135deg,
+rgba(14,165,233,0.12),
+transparent
+);
+
+top:-120%;
+left:-120%;
+transition:0.6s;
 }
 
-.skill-card:nth-child(2){
-background:linear-gradient(135deg,#1e1b4b,#9333ea33);
-}
-
-.skill-card:nth-child(3){
-background:linear-gradient(135deg,#172554,#2563eb33);
-}
-
-.skill-card:nth-child(4){
-background:linear-gradient(135deg,#3f0d12,#a71d31aa);
-}
-
-.skill-card:nth-child(5){
-background:linear-gradient(135deg,#052e16,#16a34a44);
-}
-
-.skill-card:nth-child(6){
-background:linear-gradient(135deg,#422006,#f59e0b55);
+.skill-card:hover::before{
+top:0;
+left:0;
 }
 
 .skill-card:hover{
 transform:translateY(-12px);
+border:1px solid #0ea5e9;
 }
 
 .skill-icon{
@@ -380,7 +390,8 @@ justify-content:center;
 border-radius:24px;
 font-size:32px;
 margin-bottom:24px;
-background:rgba(255,255,255,0.12);
+background:linear-gradient(135deg,#0ea5e9,#2563eb);
+box-shadow:0 10px 25px rgba(14,165,233,0.28);
 }
 
 .skill-card h3{
@@ -391,13 +402,30 @@ margin-bottom:16px;
 .skill-card p{
 line-height:1.9;
 color:#d1d5db;
+margin-bottom:28px;
+}
+
+.skill-progress{
+width:100%;
+height:10px;
+border-radius:20px;
+background:#1e293b;
+overflow:hidden;
+}
+
+.skill-progress span{
+display:block;
+height:100%;
+border-radius:20px;
+background:linear-gradient(90deg,#0ea5e9,#2563eb);
+animation:loadBar 2s ease;
 }
 
 /* EXPERIENCE */
 
 .exp-grid{
 display:grid;
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:1fr 1fr;
 gap:30px;
 }
 
@@ -406,26 +434,9 @@ padding:36px;
 transition:0.4s;
 }
 
-.exp-card:first-child{
-background:
-linear-gradient(
-135deg,
-rgba(14,165,233,0.15),
-rgba(255,255,255,0.04)
-);
-}
-
-.exp-card:last-child{
-background:
-linear-gradient(
-135deg,
-rgba(168,85,247,0.18),
-rgba(255,255,255,0.04)
-);
-}
-
 .exp-card:hover{
 transform:translateY(-10px);
+border:1px solid #0ea5e9;
 }
 
 .exp-card h3{
@@ -492,7 +503,7 @@ margin-bottom:14px;
 
 .project-content p{
 line-height:1.8;
-color:#d1d5db;
+color:#e2e8f0;
 }
 
 /* CONTACT */
@@ -501,10 +512,20 @@ color:#d1d5db;
 padding:65px;
 }
 
+.contact-box h3{
+font-size:46px;
+margin-bottom:18px;
+}
+
+.contact-box p{
+line-height:2;
+color:#d1d5db;
+margin-bottom:32px;
+}
+
 .contact-info{
 display:grid;
 gap:18px;
-margin-top:30px;
 }
 
 .contact-info div{
@@ -514,7 +535,10 @@ gap:15px;
 font-size:18px;
 }
 
-/* FOOTER */
+.contact-info i{
+color:#0ea5e9;
+font-size:22px;
+}
 
 footer{
 padding:45px;
@@ -524,42 +548,26 @@ color:#94a3b8;
 
 /* ANIMATION */
 
-@keyframes spin{
-100%{
-transform:rotate(360deg);
-}
-}
-
-@keyframes hideLoader{
-100%{
-opacity:0;
-visibility:hidden;
-}
-}
-
 @keyframes fadeUp{
+
 from{
 opacity:0;
 transform:translateY(50px);
 }
+
 to{
 opacity:1;
 transform:translateY(0);
 }
+
 }
 
-@keyframes float{
-0%{
-transform:translateY(0);
-opacity:0;
+@keyframes loadBar{
+
+from{
+width:0;
 }
-10%{
-opacity:1;
-}
-100%{
-transform:translateY(-120vh);
-opacity:0;
-}
+
 }
 
 /* MOBILE */
@@ -567,10 +575,12 @@ opacity:0;
 @media(max-width:1100px){
 
 .bg{
+width:100%;
 background-size:cover;
 opacity:0.18;
 }
 
+.stats,
 .exp-grid,
 .project-grid{
 grid-template-columns:1fr;
@@ -603,8 +613,16 @@ padding-top:210px;
 font-size:48px;
 }
 
+.hero p{
+font-size:17px;
+}
+
 .section-title{
 font-size:42px;
+}
+
+.about-box h3{
+font-size:38px;
 }
 
 .project-card{
@@ -619,28 +637,9 @@ height:320px;
 
 <body>
 
-<div id="loader">
-
-<div class="loader-ring"></div>
-
-<h2>Lokesh Rai</h2>
-
-</div>
-
-<div class="particles">
-
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-
-</div>
-
 <div class="bg"></div>
+
+<!-- NAVBAR -->
 
 <nav>
 
@@ -657,10 +656,12 @@ Lokesh <span>Rai</span>
 </ul>
 
 <a href="resume.pdf" class="resume-btn">
-Resume
+Download Resume
 </a>
 
 </nav>
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -675,19 +676,23 @@ Hi, I’m <span>Lokesh Rai</span>
 </h1>
 
 <p>
-I help brands and campaigns build impactful digital presence through social media management, content strategy, audience engagement and communication planning.
+I help brands, campaigns, and organizations build impactful digital presence
+through content strategy, social media management, audience engagement,
+and research-driven communication.
 </p>
 
 <div class="hero-buttons">
 
 <a href="mailto:lokeshrai2120@gmail.com"
 class="btn primary-btn">
+<i class="fa-solid fa-paper-plane"></i>
 Hire Me
 </a>
 
 <a href="#projects"
 class="btn secondary-btn">
-View Work
+<i class="fa-solid fa-briefcase"></i>
+View My Work
 </a>
 
 </div>
@@ -706,9 +711,39 @@ class="social-btn instagram">
 
 </div>
 
+<div class="stats">
+
+<div class="stat-box">
+<i class="fa-solid fa-briefcase"></i>
+<h2>2+</h2>
+<p>Years Experience</p>
+</div>
+
+<div class="stat-box">
+<i class="fa-solid fa-diagram-project"></i>
+<h2>15+</h2>
+<p>Projects Completed</p>
+</div>
+
+<div class="stat-box">
+<i class="fa-solid fa-users"></i>
+<h2>10+</h2>
+<p>Campaigns Supported</p>
+</div>
+
+<div class="stat-box">
+<i class="fa-solid fa-location-dot"></i>
+<h2>Delhi</h2>
+<p>NCR, India</p>
+</div>
+
+</div>
+
 </div>
 
 </section>
+
+<!-- ABOUT -->
 
 <section id="about">
 
@@ -719,16 +754,27 @@ About <span>Me</span>
 <div class="glass about-box">
 
 <h3>
-Creative Mind & Strategic Thinking
+Creative Mind. <span>Strategic Thinking.</span>
 </h3>
 
 <p>
-I am a social media professional and content researcher with experience in campaign communication, audience engagement, content coordination and digital strategy planning.
+I am a content researcher and social media professional with experience
+in digital campaigns, social media coordination, content planning,
+analytics, and audience engagement.
+
+<br><br>
+
+My expertise includes managing social media calendars,
+coordinating creatives, tracking performance insights,
+and creating engaging digital content across Instagram,
+Facebook, and X.
 </p>
 
 </div>
 
 </section>
+
+<!-- SKILLS -->
 
 <section id="skills">
 
@@ -738,57 +784,125 @@ My <span>Skills</span>
 
 <div class="skills-grid">
 
-<div class="skill-card">
+<div class="skill-card glass">
+
 <div class="skill-icon">
 <i class="fa-solid fa-hashtag"></i>
 </div>
-<h3>Social Media</h3>
-<p>Instagram, Facebook & campaign handling.</p>
+
+<h3>Social Media Management</h3>
+
+<p>
+Managing Instagram, Facebook & digital platforms
+with content planning and audience engagement.
+</p>
+
+<div class="skill-progress">
+<span style="width:95%"></span>
 </div>
 
-<div class="skill-card">
+</div>
+
+<div class="skill-card glass">
+
 <div class="skill-icon">
 <i class="fa-solid fa-camera-retro"></i>
 </div>
-<h3>Instagram Growth</h3>
-<p>Reels planning & engagement strategy.</p>
+
+<h3>Instagram Growth Strategy</h3>
+
+<p>
+Reels planning, trend tracking, reach optimization
+and engagement improvement strategies.
+</p>
+
+<div class="skill-progress">
+<span style="width:92%"></span>
 </div>
 
-<div class="skill-card">
+</div>
+
+<div class="skill-card glass">
+
 <div class="skill-icon">
 <i class="fa-solid fa-pen-nib"></i>
 </div>
+
 <h3>Content Research</h3>
-<p>Research-driven content planning.</p>
+
+<p>
+Research-driven content planning, issue analysis
+and communication support for campaigns.
+</p>
+
+<div class="skill-progress">
+<span style="width:94%"></span>
 </div>
 
-<div class="skill-card">
+</div>
+
+<div class="skill-card glass">
+
 <div class="skill-icon">
 <i class="fa-solid fa-video"></i>
 </div>
-<h3>Reels & Videos</h3>
-<p>Short-form content & trend ideas.</p>
+
+<h3>Reels & Short Videos</h3>
+
+<p>
+Planning short-form content, captions,
+hooks and engagement-focused video ideas.
+</p>
+
+<div class="skill-progress">
+<span style="width:88%"></span>
 </div>
 
-<div class="skill-card">
+</div>
+
+<div class="skill-card glass">
+
 <div class="skill-icon">
 <i class="fa-solid fa-chart-line"></i>
 </div>
-<h3>Analytics</h3>
-<p>Audience growth & campaign tracking.</p>
+
+<h3>Analytics & Reporting</h3>
+
+<p>
+Monitoring insights, audience behaviour,
+growth reports and campaign performance.
+</p>
+
+<div class="skill-progress">
+<span style="width:85%"></span>
 </div>
 
-<div class="skill-card">
+</div>
+
+<div class="skill-card glass">
+
 <div class="skill-icon">
 <i class="fa-solid fa-bullhorn"></i>
 </div>
-<h3>Campaigns</h3>
-<p>Creative coordination & execution.</p>
+
+<h3>Campaign Coordination</h3>
+
+<p>
+Coordinating creatives, schedules,
+communication flow and digital execution.
+</p>
+
+<div class="skill-progress">
+<span style="width:90%"></span>
+</div>
+
 </div>
 
 </div>
 
 </section>
+
+<!-- EXPERIENCE -->
 
 <section id="experience">
 
@@ -833,6 +947,8 @@ Work <span>Experience</span>
 
 </section>
 
+<!-- PROJECTS -->
+
 <section id="projects">
 
 <h2 class="section-title">
@@ -846,10 +962,11 @@ style="background-image:url('https://images.unsplash.com/photo-1611162618071-b39
 
 <div class="project-content">
 
-<h3>Social Media Campaigns</h3>
+<h3>Social Media Campaign Management</h3>
 
 <p>
-Managed campaign execution, audience engagement and social media coordination across digital platforms.
+Managed campaign execution, audience engagement,
+and social media coordination across digital platforms.
 </p>
 
 </div>
@@ -861,10 +978,43 @@ style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d
 
 <div class="project-content">
 
-<h3>Political Research</h3>
+<h3>Political Content Research</h3>
 
 <p>
-Conducted issue-based content research and communication planning for digital campaigns.
+Conducted issue-based content research and communication
+planning for digital campaigns.
+</p>
+
+</div>
+
+</div>
+
+<div class="project-card"
+style="background-image:url('https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=1200');">
+
+<div class="project-content">
+
+<h3>Instagram Engagement Strategy</h3>
+
+<p>
+Assisted in reels planning, trend tracking,
+and engagement growth.
+</p>
+
+</div>
+
+</div>
+
+<div class="project-card"
+style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200');">
+
+<div class="project-content">
+
+<h3>Creative Coordination Projects</h3>
+
+<p>
+Coordinated creatives, captions, social media assets,
+and campaign communication.
 </p>
 
 </div>
@@ -875,6 +1025,8 @@ Conducted issue-based content research and communication planning for digital ca
 
 </section>
 
+<!-- CONTACT -->
+
 <section id="contact">
 
 <h2 class="section-title">
@@ -882,6 +1034,15 @@ Contact <span>Me</span>
 </h2>
 
 <div class="glass contact-box">
+
+<h3>
+Let’s work together.
+</h3>
+
+<p>
+Have a project, campaign, or opportunity?
+Let’s connect and build something impactful.
+</p>
 
 <div class="contact-info">
 
