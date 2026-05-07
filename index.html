@@ -108,47 +108,14 @@ animation:float 12s linear infinite;
 bottom:-100px;
 }
 
-.particles span:nth-child(1){
-left:10%;
-animation-duration:10s;
-}
-
-.particles span:nth-child(2){
-left:25%;
-animation-duration:14s;
-}
-
-.particles span:nth-child(3){
-left:40%;
-animation-duration:11s;
-width:12px;
-height:12px;
-}
-
-.particles span:nth-child(4){
-left:55%;
-animation-duration:16s;
-}
-
-.particles span:nth-child(5){
-left:70%;
-animation-duration:13s;
-}
-
-.particles span:nth-child(6){
-left:82%;
-animation-duration:17s;
-}
-
-.particles span:nth-child(7){
-left:92%;
-animation-duration:12s;
-}
-
-.particles span:nth-child(8){
-left:48%;
-animation-duration:15s;
-}
+.particles span:nth-child(1){left:10%;animation-duration:10s;}
+.particles span:nth-child(2){left:25%;animation-duration:14s;}
+.particles span:nth-child(3){left:40%;animation-duration:11s;width:12px;height:12px;}
+.particles span:nth-child(4){left:55%;animation-duration:16s;}
+.particles span:nth-child(5){left:70%;animation-duration:13s;}
+.particles span:nth-child(6){left:82%;animation-duration:17s;}
+.particles span:nth-child(7){left:92%;animation-duration:12s;}
+.particles span:nth-child(8){left:48%;animation-duration:15s;}
 
 /* NAVBAR */
 
@@ -424,7 +391,58 @@ margin-bottom:16px;
 .skill-card p{
 line-height:1.9;
 color:#d1d5db;
-margin-bottom:28px;
+}
+
+/* EXPERIENCE */
+
+.exp-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
+
+.exp-card{
+padding:36px;
+transition:0.4s;
+}
+
+.exp-card:first-child{
+background:
+linear-gradient(
+135deg,
+rgba(14,165,233,0.15),
+rgba(255,255,255,0.04)
+);
+}
+
+.exp-card:last-child{
+background:
+linear-gradient(
+135deg,
+rgba(168,85,247,0.18),
+rgba(255,255,255,0.04)
+);
+}
+
+.exp-card:hover{
+transform:translateY(-10px);
+}
+
+.exp-card h3{
+font-size:32px;
+margin-bottom:12px;
+}
+
+.exp-card span{
+color:#0ea5e9;
+display:block;
+margin-bottom:18px;
+}
+
+.exp-card ul{
+padding-left:20px;
+line-height:2;
+color:#d1d5db;
 }
 
 /* PROJECTS */
@@ -470,6 +488,11 @@ z-index:2;
 .project-content h3{
 font-size:34px;
 margin-bottom:14px;
+}
+
+.project-content p{
+line-height:1.8;
+color:#d1d5db;
 }
 
 /* CONTACT */
@@ -548,6 +571,7 @@ background-size:cover;
 opacity:0.18;
 }
 
+.exp-grid,
 .project-grid{
 grid-template-columns:1fr;
 }
@@ -595,8 +619,6 @@ height:320px;
 
 <body>
 
-<!-- LOADER -->
-
 <div id="loader">
 
 <div class="loader-ring"></div>
@@ -604,8 +626,6 @@ height:320px;
 <h2>Lokesh Rai</h2>
 
 </div>
-
-<!-- PARTICLES -->
 
 <div class="particles">
 
@@ -620,11 +640,7 @@ height:320px;
 
 </div>
 
-<!-- BG -->
-
 <div class="bg"></div>
-
-<!-- NAVBAR -->
 
 <nav>
 
@@ -635,6 +651,7 @@ Lokesh <span>Rai</span>
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
@@ -644,8 +661,6 @@ Resume
 </a>
 
 </nav>
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -695,8 +710,6 @@ class="social-btn instagram">
 
 </section>
 
-<!-- ABOUT -->
-
 <section id="about">
 
 <h2 class="section-title">
@@ -716,8 +729,6 @@ I am a social media professional and content researcher with experience in campa
 </div>
 
 </section>
-
-<!-- SKILLS -->
 
 <section id="skills">
 
@@ -779,7 +790,48 @@ My <span>Skills</span>
 
 </section>
 
-<!-- PROJECTS -->
+<section id="experience">
+
+<h2 class="section-title">
+Work <span>Experience</span>
+</h2>
+
+<div class="exp-grid">
+
+<div class="glass exp-card">
+
+<h3>Moving Pixel Pvt. Ltd.</h3>
+
+<span>May 2025 – Nov 2025</span>
+
+<ul>
+<li>Managed social media coordination & campaign execution</li>
+<li>Handled reels, content tracking & performance monitoring</li>
+<li>Supported digital campaign communication</li>
+<li>Coordinated creatives & social media content</li>
+<li>Worked on audience engagement & trend monitoring</li>
+</ul>
+
+</div>
+
+<div class="glass exp-card">
+
+<h3>Freelance Content Researcher</h3>
+
+<span>2023 – 2025</span>
+
+<ul>
+<li>Content planning & research support</li>
+<li>Digital campaign coordination</li>
+<li>Social media strategy assistance</li>
+<li>Research-based communication planning</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
 
 <section id="projects">
 
@@ -796,6 +848,10 @@ style="background-image:url('https://images.unsplash.com/photo-1611162618071-b39
 
 <h3>Social Media Campaigns</h3>
 
+<p>
+Managed campaign execution, audience engagement and social media coordination across digital platforms.
+</p>
+
 </div>
 
 </div>
@@ -807,6 +863,10 @@ style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d
 
 <h3>Political Research</h3>
 
+<p>
+Conducted issue-based content research and communication planning for digital campaigns.
+</p>
+
 </div>
 
 </div>
@@ -814,8 +874,6 @@ style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d
 </div>
 
 </section>
-
-<!-- CONTACT -->
 
 <section id="contact">
 
